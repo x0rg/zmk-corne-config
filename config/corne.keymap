@@ -81,14 +81,14 @@
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// |       |      |      |       |       |            |        |    |    |    |    |    |    |
+// | OUT_B | OUT_U|      |       |       |            |        |    |    |    |    |    |    |
 // |       | Prev | Next | Vol - | Vol + | Play/Pause |        |    |    |    |    |    |    |  
 // | BTCLR | BT1  | BT2  | BT3   | BT4   | BT5        |        |    |    |    |    |    |    |
 //                       |       |       |            |        |    |    |    |    
                         bindings = <
-   &trans     &trans        &trans       &trans       &trans       &trans            &trans  &trans  &trans  &trans  &trans &trans
-   &trans     &kp C_PREV    &kp C_NEXT   &kp C_VOL_DN &kp C_VOL_UP &kp C_PP          &trans  &trans  &trans  &trans  &trans &trans
-   &bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &trans  &trans  &trans  &trans  &trans &trans
+   &out OUT_BLE  &out OUT_USB  &trans       &trans       &trans       &trans            &trans  &trans  &trans  &trans  &trans &trans
+   &trans        &kp C_PREV    &kp C_NEXT   &kp C_VOL_DN &kp C_VOL_UP &kp C_PP          &trans  &trans  &trans  &trans  &trans &trans
+   &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &trans  &trans  &trans  &trans  &trans &trans
                           	         &trans       &trans       &trans            &trans  &trans  &trans
                         >;
                 };
