@@ -40,14 +40,14 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | TAB  |  Q  |  W  |  E  |  R  |    T    |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | ESC  |  Q  |  W  |  E  |  R  |    T    |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |    G    |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |    B    |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+// | SHFT |  Z  |  X  |  C  |  V  |    B    |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
 //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &tp LC(LS(RALT)) SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC 
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT 
                &kp LGUI &mo LOWER &tp LALT RET   &tp LC(LS(LA(LGUI))) SPACE &mo RAISE &kp RALT
                         >;
                 };
@@ -69,13 +69,13 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |       |  F1  |  F2  |  F3  |  F4  |  F5  |    |  F6  |  F7  |  F8  |  F9  |  F10  |   |
-// |       |      |      |      |      |      |    |  LFT |  DWN |  UP  |  RGT |       |   | 
-// |       |      |      |      |      |      |    |      |      |      |      |       |   |   
+// |  TAB  |      |      |      |      |      |    |  LFT |  DWN |  UP  |  RGT |       |   | 
+// |  CPL  |      |      |      |      |      |    |      |      |      |      |       |   |   
 //                       |      |      |      |    |      |      |      |
                         bindings = <
    &trans    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5      &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &trans
-   &trans    &trans   &trans   &trans   &trans   &trans      &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &trans
-   &trans    &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans &trans    &trans  &trans
+   &kp TAB   &trans   &trans   &trans   &trans   &trans      &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &trans
+   &kp CPL   &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans &trans    &trans  &trans
                                &trans   &trans   &trans      &trans   &trans   &trans
                         >;
                 };
@@ -90,7 +90,7 @@
    &out OUT_BLE  &out OUT_USB  &trans       &trans       &trans       &trans            &trans  &trans  &trans  &trans  &trans &trans
    &trans        &kp C_PREV    &kp C_NEXT   &kp C_VOL_DN &kp C_VOL_UP &kp C_PP          &trans  &trans  &trans  &trans  &trans &trans
    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &trans  &trans  &trans  &trans  &trans &trans
-                          	         &trans       &trans       &trans            &trans  &trans  &trans
+                          	            &trans       &trans       &trans            &trans  &trans  &trans
                         >;
                 };
         };
